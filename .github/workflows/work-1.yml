@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: private_html 생성
         env:
-          NO_HTML: ${{ secrets.PRIVATE_HTML }}
+          PRIVATE_HTML: ${{ secrets.PRIVATE_HTML }}
         run: echo "$PRIVATE_HTML" > src/private.html
       - name: Docker Buildx 설치
         uses: docker/setup-buildx-action@v2
